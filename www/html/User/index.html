@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="nav-bar"></div>
+
+    <h1>{{ .title }}</h1>
+
+    {{if .login}}
+      <h2>USER IS LOGIN</h2>
+      <p>{{.user.Userid}}</p>
+      <p>{{.user.Username}}</p>
+      <p>{{.user.Email}}</p>
+      <p>{{.user.Password}}</p>
+      <p>{{.user.Date}}</p>
+
+    {{end}}
+    <script type="module" src="/public/js/index.js"></script>
+  </body>
+</html>
